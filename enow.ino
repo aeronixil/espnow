@@ -94,7 +94,7 @@ void setup() {
   
   // Register peer
   memcpy(peerInfo.peer_addr, peerAddress, 6);
-  peerInfo.channel = 8;  
+  peerInfo.channel = 1;  
   peerInfo.encrypt = false;
   
   // Add peer        
