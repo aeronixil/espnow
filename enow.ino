@@ -7,7 +7,7 @@ String devIdentifier = "bravo";  //name of this device
 //mac address of peer device
 
 //uint8_t peerAddress[] = {0x3C, 0x61, 0x05, 0x17, 0x1B, 0x1C}; 
-uint8_t peerAddress[] = {0x24, 0x0A, 0xC4, 0xEF, 0x66, 0x10};  //mac address of peer device
+uint8_t peerAddress[] = {0x24, 0x0a, 0xc4, 0xef, 0x66, 0x10};  //mac address of peer device
 //
 //
 //
@@ -79,6 +79,8 @@ void setup() {
  
   // Set device as a Wi-Fi Station
   WiFi.mode(WIFI_STA);
+    int32_t channel = 1;
+  esp_wifi_set_channel(channel, WIFI_SECOND_CHAN_NONE);
   int a= esp_wifi_set_protocol( ESP_IF_WIFI_STA, WIFI_PROTOCOL_LR );
     Serial.println(a);
 
